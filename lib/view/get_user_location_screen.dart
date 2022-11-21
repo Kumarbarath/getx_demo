@@ -1,10 +1,32 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:new_project/controller/location_controller.dart';
 
-class GetUserLocationScreen extends StatelessWidget {
+class GetUserLocationScreen extends StatefulWidget {
   const GetUserLocationScreen({Key? key}) : super(key: key);
+
+  @override
+  State<GetUserLocationScreen> createState() => _GetUserLocationScreenState();
+}
+
+class _GetUserLocationScreenState extends State<GetUserLocationScreen> {
+
+  Future<void> sendData() async{
+
+    FirebaseFirestore.instance
+        .collection('location')
+        .add({'location': 'ok'});
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    sendData( );
+
+  }
 
   @override
   Widget build(BuildContext context) {

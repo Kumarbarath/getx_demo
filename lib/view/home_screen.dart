@@ -8,6 +8,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     final HomeScreenController controller = Get.put(HomeScreenController());
     return Scaffold(
         appBar: AppBar(

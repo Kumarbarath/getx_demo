@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
 import 'package:location/location.dart';
 
@@ -37,15 +38,13 @@ class LocationController extends GetxController{
 
    // _locationData = await location.getLocation();
     location.onLocationChanged.listen((LocationData currentLocation) {
-
       print(currentLocation);
-      lat.value=currentLocation.latitude!;
-      lng.value=currentLocation.longitude!;
+      lat.value = currentLocation.latitude!;
+      lng.value = currentLocation.longitude!;
+
+
+      location.enableBackgroundMode(enable: true);
     });
-    location.enableBackgroundMode(enable: true);
-
-
-
   }
 
 }
