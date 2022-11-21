@@ -20,7 +20,8 @@ class GetUserLocationScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-             const  Text('Fetching the user location'),
+
+             const Text('Fetching the user location'),
 
               Text('\nLat : ${locationController.lat.value}'),
               Text('Lng : ${locationController.lng.value}'),
