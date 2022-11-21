@@ -1,18 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/src/snackbar/snackbar.dart';
 import 'package:new_project/controller/home_controller.dart';
 import 'package:new_project/view/second_screen.dart';
 
-class HomesScreen extends StatefulWidget {
-  const HomesScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
-  @override
-  State<HomesScreen> createState() => _HomesScreenState();
-}
-
-class _HomesScreenState extends State<HomesScreen> {
   @override
   Widget build(BuildContext context) {
     final HomeScreenController controller = Get.put(HomeScreenController());
@@ -101,7 +94,7 @@ class _HomesScreenState extends State<HomesScreen> {
                                 ],
                               ),
                               onPressed: () {
-                                Get.to(SecondScreen());
+                                Get.to(()=>SecondScreen());
                               }),
                        ),
                         Text(

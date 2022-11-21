@@ -12,9 +12,23 @@ dependencies:
   flutter:
     sdk: flutter
 
+  #Icon
   cupertino_icons: ^1.0.2
+
+  #State management
   get: ^4.6.5
+
+  #Connectivity
   http: ^0.13.5
+
+  #Database
+  cloud_firestore: ^4.1.0
+
+  #Get user location
+  location: ^4.4.0
+
+  #Change app package name
+  change_app_package_name: ^1.1.0
 
 
 dev_dependencies:

@@ -6,6 +6,7 @@ import 'package:http/http.dart' as http;
 import 'package:new_project/modal/home_screen_modal.dart';
 
 class HomeScreenController extends GetxController {
+
   final count=0.obs;
   RxBool isDataLoading=true.obs;
   List<String> imageList = <String>[].obs;
