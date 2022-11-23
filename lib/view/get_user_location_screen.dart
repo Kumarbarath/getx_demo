@@ -13,11 +13,23 @@ class GetUserLocationScreen extends StatefulWidget {
 
 class _GetUserLocationScreenState extends State<GetUserLocationScreen> {
 
+  // Future<void> sendData() async{
+  //
+  //   FirebaseFirestore.instance
+  //       .collection('location')
+  //       .add({'location': 'ok'});
+  // }
   Future<void> sendData() async{
 
     FirebaseFirestore.instance
-        .collection('location')
-        .add({'location': 'ok'});
+        .collection('udit').get().then((value) => print(value));
+
+
+
+    FirebaseFirestore.instance
+        .collection('location').doc('barath').set({'barath':'done'});
+
+
   }
 
   @override

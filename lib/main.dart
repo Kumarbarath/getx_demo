@@ -1,37 +1,36 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:new_project/view/get_user_location_screen.dart';
-import 'package:new_project/view/home_screen.dart';
+import 'package:new_project/services/firebase_options.dart';
+import 'package:new_project/view/site_list_screen.dart';
+import 'package:sizer/sizer.dart';
 
-Future<void> main() async{
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+Future<void> initializeDefault() async {
+  print('Initialized');
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+}
 
+Future<void> main() async {
+  //await initializeDefault();
 
-  // FirebaseFirestore.instance
-  //     .collection('location')
-  //     .add({'location': 'ok'});
-
-  runApp( MyApp());
-
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home:  const GetUserLocationScreen(),
-    );
+    return Sizer(builder:
+        (BuildContext context, Orientation orientation, DeviceType deviceType) {
+      return GetMaterialApp(
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: SiteListScreen(),
+      );
+    });
   }
 }
-

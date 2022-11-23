@@ -1,34 +1,150 @@
 {
   "project_info": {
-    "project_number": "951093447725",
-    "project_id": "getxdemo-1db98",
-    "storage_bucket": "getxdemo-1db98.appspot.com"
+    "project_number": "390884658466",
+    "firebase_url": "https://teamtask--neetable-default-rtdb.firebaseio.com",
+    "project_id": "teamtask--neetable",
+    "storage_bucket": "teamtask--neetable.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:951093447725:android:b3ec2e075acfb8b6dabca4",
+        "mobilesdk_app_id": "1:390884658466:android:987897a87179c7b109697b",
         "android_client_info": {
-          "package_name": "com.testlocation.location"
+          "package_name": "com.example.firestore_location"
         }
       },
       "oauth_client": [
         {
-          "client_id": "951093447725-pstsddi691qsahth9p714dnf4rketsvf.apps.googleusercontent.com",
+          "client_id": "390884658466-4gq11nn8r51s1qo8nelhpsaantquupqe.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDP-b-p2SITgzPbA2-zNRUPlXQuPwfvXik"
+          "current_key": "AIzaSyDlBf6xh2IYaswYHJobLqZSnp-FLDpxTs0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "951093447725-pstsddi691qsahth9p714dnf4rketsvf.apps.googleusercontent.com",
+              "client_id": "390884658466-4gq11nn8r51s1qo8nelhpsaantquupqe.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "390884658466-2e1srsjjjk8m8fl1i066hpik3ir95agf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.neetable.shopping"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390884658466:android:a1296569c0ad559309697b",
+        "android_client_info": {
+          "package_name": "com.example.location_tracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390884658466-4gq11nn8r51s1qo8nelhpsaantquupqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlBf6xh2IYaswYHJobLqZSnp-FLDpxTs0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390884658466-4gq11nn8r51s1qo8nelhpsaantquupqe.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "390884658466-2e1srsjjjk8m8fl1i066hpik3ir95agf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.neetable.shopping"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390884658466:android:fd97ec61233b984609697b",
+        "android_client_info": {
+          "package_name": "com.location.testlocation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390884658466-4gq11nn8r51s1qo8nelhpsaantquupqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlBf6xh2IYaswYHJobLqZSnp-FLDpxTs0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390884658466-4gq11nn8r51s1qo8nelhpsaantquupqe.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "390884658466-2e1srsjjjk8m8fl1i066hpik3ir95agf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.neetable.shopping"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390884658466:android:1f89f0d02e2c4cc509697b",
+        "android_client_info": {
+          "package_name": "com.neetable.shopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390884658466-4gq11nn8r51s1qo8nelhpsaantquupqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlBf6xh2IYaswYHJobLqZSnp-FLDpxTs0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390884658466-4gq11nn8r51s1qo8nelhpsaantquupqe.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "390884658466-2e1srsjjjk8m8fl1i066hpik3ir95agf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.neetable.shopping"
+              }
             }
           ]
         }

@@ -6,11 +6,11 @@ import 'package:http/http.dart' as http;
 import 'package:new_project/modal/home_screen_modal.dart';
 
 class HomeScreenController extends GetxController {
-
-  final count=0.obs;
-  RxBool isDataLoading=true.obs;
+  final count = 0.obs;
+  RxBool isDataLoading = true.obs;
+  RxBool hasError = false.obs;
   List<String> imageList = <String>[].obs;
-
+  late ResponseModal res;
 
   @override
   void onInit() {
@@ -19,39 +19,38 @@ class HomeScreenController extends GetxController {
     getData();
   }
 
-  void increment(){
+  void increment() {
     count.value++;
   }
 
-  Future<void> getData() async{
+  Future<void> getData() async {
     print('getData calling');
-    try{
-       isDataLoading(true);
+    try {
+      isDataLoading(true);
+      hasError(false);
       http.Response response = await http.get(
-          Uri.tryParse('https://dummyjson.com/products/1')!,
+        Uri.tryParse('https://dummyjson.com/products/1')!,
       );
-      if(response.statusCode == 200){
+      if (response.statusCode == 200) {
         ///data successfully
         var result = jsonDecode(response.body);
-        var res =  ResponseModal.fromJson(result);
+        res = ResponseModal.fromJson(result).obs();
         print('object');
+
         print(res.images?.toList());
-        res.images?.forEach((element) {imageList.add(element);});
+        res.images?.forEach((element) {
+          imageList.add(element);
+        });
+      } else {
 
       }
-      else{
-
-      }
-    }
-    catch(e){
-
+      hasError(false);
+    } catch (e) {
       log('Error while getting data is $e');
       print('Error while getting data is $e');
-    }
-    finally{
-
+      hasError(true);
+    } finally {
       isDataLoading(false);
     }
-
   }
 }

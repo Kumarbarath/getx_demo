@@ -3,12 +3,28 @@ import 'package:get/get.dart';
 import 'package:new_project/controller/home_controller.dart';
 import 'package:new_project/view/second_screen.dart';
 
-class HomeScreen extends StatelessWidget {
+
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  State<HomeScreen> createState() => _HomeScreenState();
+}
 
+class _HomeScreenState extends State<HomeScreen> {
+
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    print('Initialized');
+
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final HomeScreenController controller = Get.put(HomeScreenController());
     return Scaffold(
         appBar: AppBar(
@@ -30,7 +46,8 @@ class HomeScreen extends StatelessWidget {
                   ? CircularProgressIndicator()
                   : Column(
                       children: [
-                        const SizedBox(
+                        Text('${controller.res.description}'),
+                        SizedBox(
                           height: 30,
                         ),
                         const Text(
@@ -95,22 +112,25 @@ class HomeScreen extends StatelessWidget {
                                 ],
                               ),
                               onPressed: () {
-                                Get.to(()=>SecondScreen());
+                                Get.to(() => SecondScreen());
                               }),
-                       ),
+                        ),
                         Text(
                           '${controller.imageList.length}',
                         ),
                         ListView.builder(
-                          shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
+                            shrinkWrap: true,
+                            physics: NeverScrollableScrollPhysics(),
                             itemCount: controller.imageList.length,
                             itemBuilder: (BuildContext context, index) {
                               return Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Image.network('${controller.imageList[index]}',width: double.infinity,height: 200,),
+                                child: Image.network(
+                                  '${controller.imageList[index]}',
+                                  width: double.infinity,
+                                  height: 200,
+                                ),
                               );
-
                             })
                       ],
                     ),
