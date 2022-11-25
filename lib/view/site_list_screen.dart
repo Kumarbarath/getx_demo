@@ -15,7 +15,7 @@ class SiteListScreen extends StatelessWidget {
         GlobalKey<RefreshIndicatorState>();
     ScrollController scrollController = ScrollController();
 
-    int number = 0;
+    int number = 99;
 
     return Scaffold(
       backgroundColor: Colors.white,

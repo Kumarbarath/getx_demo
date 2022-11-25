@@ -44,6 +44,10 @@ dependencies:
   #Pagination
   lazy_load_scrollview: ^1.3.0
 
+  #Maps
+  syncfusion_flutter_maps: ^20.3.58
+
+
 
 
   background_locator:
